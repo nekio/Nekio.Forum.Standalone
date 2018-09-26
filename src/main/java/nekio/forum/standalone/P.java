@@ -59,6 +59,12 @@ public class P {
         }
         
         public static void x(Exception e){
+            Logger.e(Track.as(P.ID, "Exception raised", Global.PROJECT_STACKTRACE_LEVEL));
+            Logger.x(e);
+        }
+        
+        public static void x(Exception e, String message){
+            Logger.e(Track.as(P.ID, message, Global.PROJECT_STACKTRACE_LEVEL));
             Logger.x(e);
         }
     }
